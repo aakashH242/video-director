@@ -1,0 +1,30 @@
+{
+  "purpose": "Owner-approved README showcase in the private video-director repository",
+  "comparison": "Constructed plain-versus-directed study using the same source assets and duration; not a historical result or causal quality benchmark",
+  "video": {
+    "file": "before-after.mp4",
+    "duration_seconds": 18,
+    "dimensions": [1920, 1080],
+    "fps": 60,
+    "sha256": "d07c8f8222fca3722ff30d1919e33f05ad8985a19e3e08ff139a7993b9bc1640",
+    "audio": false
+  },
+  "animated_preview": {
+    "file": "demo-preview.gif",
+    "dimensions": [640, 360],
+    "fps": 10,
+    "duration_seconds": 18,
+    "display_width": 480
+  },
+  "screenshots": [
+    {"file": "hybrid.jpg", "source": "Directed master at 2.7 seconds", "content": "Reused AI illustration plus code-authored SVG foreground"},
+    {"file": "real-ui.jpg", "source": "Directed master at 9.8 seconds", "content": "Earlier actual Tenwrite coffee-demo screenshot, editorial crop and annotation; not a new live operation"},
+    {"file": "3d-annotations.jpg", "source": "Directed master at 15.2 seconds", "content": "Procedural educational Geneva mechanism with a tracked pin annotation"}
+  ],
+  "screenshot_dimensions": [960, 540],
+  "screenshot_display_width": 200,
+  "new_image_or_video_generation": false,
+  "cost_claim": "Reusing assets and editing motion/annotations in code can avoid new media-generation calls; no quantified total-cost or speed benchmark is claimed",
+  "raw_source_media_or_credentials_included": false,
+  "public_social_upload": false
+}

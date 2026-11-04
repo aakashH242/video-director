@@ -8,6 +8,7 @@ vendor/
 review/
 output/
 *.mp4
+!/docs/showcase/before-after.mp4
 *.webm
 *.wav
 *.mp3
