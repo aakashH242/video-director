@@ -1,0 +1,7 @@
+{
+  "illustration": "media/illustration.png",
+  "ui": "media/ui.png",
+  "three": "vendor/three.module.min.js",
+  "duration": 18,
+  "note": "Supply approved media in the copied project; adjust UI crop anchors in main.js. No media or Three.js is bundled."
+}

@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Video Director — matched local study</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main id="stage" aria-label="Three matched video production techniques">
+    <div id="artScene" class="scene">
+      <img id="art" alt="Approved generated illustration used as an artistic plate">
+      <div class="scrim"></div>
+      <svg id="foreground" viewBox="0 0 1280 720" aria-label="Editable SVG foreground">
+        <path id="route" d="M 382 450 C 490 450 460 325 588 325" fill="none" stroke="#84ffe0" stroke-width="5" stroke-linecap="round"/>
+        <g id="card"><rect x="65" y="325" width="325" height="185" rx="15" fill="#f7f6f0"/>
+          <rect x="88" y="348" width="42" height="42" rx="8" fill="#133e49"/>
+          <path d="M101 357h11l7 7v17h-18z M112 357v9h7" stroke="#a4ffe6" fill="none" stroke-width="2"/>
+          <text x="88" y="428" fill="#132a3a" font-size="28" font-weight="700">Editable foreground.</text>
+          <text x="88" y="474" fill="#4d6171" font-size="20">Words, shapes and motion.</text>
+        </g>
+        <circle id="traveller" r="7" fill="#fff5a9"/>
+      </svg>
+    </div>
+    <div id="uiScene" class="scene">
+      <div id="uiWindow"><img id="ui" alt="Actual product screenshot; crop and highlights are editorial"></div>
+      <div id="fieldLabel">SEO title.<br>Description.<br>Focus keyword.</div>
+      <svg id="uiOverlay" viewBox="0 0 1280 720" aria-label="Screenshot field annotation">
+        <path id="leader" fill="none" stroke="#a94b08" stroke-width="2"/>
+        <rect id="highlight" fill="#ffb640" fill-opacity=".08" stroke="#bd610c" stroke-width="3" rx="7"/>
+      </svg>
+      <p class="sourceNote">Actual Tenwrite screenshot · crop study, not a live operation</p>
+    </div>
+    <div id="mechanismScene" class="scene">
+      <canvas id="gl" aria-label="Procedural four-slot Geneva drive"></canvas>
+      <svg id="partOverlay" viewBox="0 0 1280 720" aria-label="Tracked drive-pin annotation">
+        <path id="partLeader" fill="none" stroke="#ffe08e" stroke-width="2"/>
+        <circle id="pinRing" r="16" fill="none" stroke="#ffe08e" stroke-width="3"/>
+      </svg>
+      <div id="partLabel">DRIVE PIN<span>Turns the wheel, then leaves.</span></div>
+      <div id="state">ONE STEP. THEN A PAUSE.</div>
+    </div>
+    <header><p id="eyebrow"></p><h1 id="title"></h1></header>
+    <footer><span id="explanation"></span><span id="mode"></span></footer>
+    <div id="progress"></div>
+  </main>
+  <nav id="chapters" aria-label="Choose a static scene"><button data-scene="0" type="button">Artwork + SVG</button><button data-scene="1" type="button">Real UI</button><button data-scene="2" type="button">3D mechanism</button></nav>
+  <script type="module" src="main.js"></script>
+</body>
+</html>

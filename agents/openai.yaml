@@ -1,0 +1,4 @@
+interface:
+  display_name: "Video Director"
+  short_description: "Direct polished hybrid, UI and 3D videos"
+  default_prompt: "Use $video-director to make a polished video with readable visuals and smooth motion, and keep it local for review."
