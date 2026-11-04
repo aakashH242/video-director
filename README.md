@@ -14,17 +14,13 @@ An installable agent skill. No new video app to learn.
 
 The same assets, presented two ways: a plain overview on the left; directed motion, readable crops and tracked labels on the right.
 
-<a href="docs/showcase/before-after.mp4" title="Open the full 18-second before/after MP4">
+<a href="docs/showcase/before-after.mp4?raw=true" title="Download the full 18-second before/after MP4">
   <img src="docs/showcase/demo-preview.gif" alt="Animated before/after: AI illustration with SVG, a real UI close-up, and a 3D mechanism with a tracked label" width="480">
 </a>
 
-**[Watch or download the full demo →](docs/showcase/before-after.mp4)** · 18 seconds · 1080p · 60 fps · silent
-
-<sub>The preview loops at 10 fps; the linked MP4 is 60 fps. Both sides use the same assets and duration. The plain version was created for this presentation comparison.</sub>
+**[Download the full-quality MP4 →](docs/showcase/before-after.mp4?raw=true)** · 18 seconds · 1080p · 60 fps · silent
 
 ## A closer look
-
-Small previews, full-size details on click.
 
 | AI artwork + SVG | Readable product UI | 3D + tracked annotations |
 | :---: | :---: | :---: |
