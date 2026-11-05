@@ -2,6 +2,8 @@
 
 Generate the atmosphere once. Keep the words, diagram, highlights and timing editable. This recipe covers [layer choice](#choose-what-belongs-in-pixels), [asset planning](#plan-the-plate-before-generation), [a worked example](#worked-example-add-a-plate-to-the-first-video), [crop-safe anchors](#keep-crops-and-anchors-together) and [review](#review-and-revise-without-regeneration).
 
+See it in action: [A little sunlight](../assets/hybrid-demo/README.md) is a complete 12-second example with an actual generated hillside plate, editable SVG equipment, a tracked energy label and a layer-reveal wipe. Its original image, exact prompt, provenance, tests and render commands are included. No new generation is needed to run or revise it.
+
 ## Choose what belongs in pixels
 
 | Layer | Good use | Avoid |

@@ -27,6 +27,18 @@ The same assets, presented two ways: a plain overview on the left; directed moti
 | <a href="docs/showcase/hybrid.jpg"><img src="docs/showcase/hybrid.jpg" width="200" alt="AI illustration behind an editable SVG card and animated route"></a> | <a href="docs/showcase/real-ui.jpg"><img src="docs/showcase/real-ui.jpg" width="200" alt="Actual Tenwrite screenshot cropped to its SEO fields with a description highlight"></a> | <a href="docs/showcase/3d-annotations.jpg"><img src="docs/showcase/3d-annotations.jpg" width="200" alt="Working Geneva drive with a leader line following the drive pin"></a> |
 | Keep the art. Control the words and motion. | Show the field people need to read. | Point to the part you're explaining. |
 
+## One painting. Editable action.
+
+A generated hillside becomes the setting. The solar panel, lamp, energy path and labels stay in SVG. Watch the final wipe reveal the layers.
+
+<a href="assets/hybrid-demo/README.md" title="Open the editable AI background + SVG example">
+  <img src="docs/showcase/hybrid-demo.gif" alt="Painted hillside with an editable SVG solar panel, a tracked electricity marker and a lamp lighting up; a wipe reveals the SVG drawing layer" width="400">
+</a>
+
+**[Open the editable example →](assets/hybrid-demo/README.md)** · 12 seconds · silent · one generated still, code-controlled motion
+
+Change a label, colour or pause. Keep the same painting. The example includes the original background, exact prompt and runnable source.
+
 ## Iterate in code. Save generation for what needs it.
 
 A new label shouldn't need a new video generation. Neither should a slower zoom, a longer pause or a different camera angle.
@@ -109,6 +121,7 @@ Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/pro
 | [Recipes](references/) | Hybrid artwork, real UI, 3D, audio, comparisons and production checks. |
 | [Working scripts](scripts/) | Frame-exact capture, local serving, audio pauses, side-by-side comparisons and export verification. |
 | [Runnable first video](assets/first-video/) | A complete, editable SVG explainer with locked dependencies, setup checks and export commands. |
+| [AI background + SVG demo](assets/hybrid-demo/README.md) | A generated painting with editable equipment, tracked labels and a layer reveal. |
 | [Editable starter](assets/comparison-study/) | The three-scene study, ready for your own approved art, screenshot and Three.js dependency. |
 | [Showcase](docs/showcase/) | The demo and small screenshots shown above. |
 

@@ -1,0 +1,17 @@
+{
+  "name": "video-director-hybrid-demo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": "^22.0.0 || ^24.0.0 || ^26.0.0"},
+  "scripts": {
+    "browser:install": "playwright install chromium",
+    "doctor": "node tools/doctor.mjs",
+    "test": "node --test scene.test.mjs",
+    "preview": "node tools/serve.mjs . --port 8097",
+    "timing": "node tools/capture.mjs --seconds 12 --fps 8 --width 1280 --height 720 --out output/hybrid-timing.mp4",
+    "render": "node tools/capture.mjs --seconds 12 --fps 60 --width 1280 --height 720 --out output/hybrid-demo.mp4",
+    "verify": "node tools/verify.mjs output/hybrid-demo.mp4 --seconds 12 --fps 60 --width 1280 --height 720"
+  },
+  "devDependencies": {"playwright": "1.64.1"}
+}

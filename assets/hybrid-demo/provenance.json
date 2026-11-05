@@ -1,0 +1,22 @@
+{
+  "asset": "art/hillside.png",
+  "role": "AI-generated still background; all equipment, titles, leaders and motion are SVG/code",
+  "tool": "built-in image_gen",
+  "model": null,
+  "modelNote": "The tool did not expose a model identifier.",
+  "jobId": null,
+  "promptFile": "prompts/background.txt",
+  "referenceFiles": [],
+  "nativeSize": [1672, 941],
+  "sha256": "b482d48d3b3e1715178025237e79f8693f3222c066862aa19a82e73cac250448",
+  "originalBytes": 2381103,
+  "originalPreserved": true,
+  "composition": "xMidYMid slice into 1280x720, common world transform with SVG foreground",
+  "generationCalls": 1,
+  "generationCost": null,
+  "costNote": "Tool did not expose a monetary charge; unknown is not zero. No separately billed provider API was invoked.",
+  "rightsNote": "Generated for this owner-requested demo. No external stock assets. Repository visibility does not assign a new licence to the artwork.",
+  "audio": false,
+  "mechanicalAccuracy": "Simplified energy-flow illustration, not an electrical wiring plan.",
+  "socialPublication": false
+}

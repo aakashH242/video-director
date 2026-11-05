@@ -1,0 +1,41 @@
+{
+  "example": "../../assets/hybrid-demo/README.md",
+  "plateProvenance": "../../assets/hybrid-demo/provenance.json",
+  "master": {
+    "file": "hybrid-demo.mp4",
+    "location": "Local review output; not bundled in this repository",
+    "durationSeconds": 12,
+    "dimensions": [1280, 720],
+    "fps": 60,
+    "frames": 720,
+    "bytes": 6794731,
+    "sha256": "4d7548468687eb09d12eb0b8ece3a10bad047349235992f23c8ad1d1c01b176f",
+    "audio": false,
+    "fullDecodePassed": true,
+    "captureErrors": 0,
+    "failedRequests": 0,
+    "retries": 0
+  },
+  "preview": {
+    "file": "hybrid-demo.gif",
+    "durationSeconds": 12,
+    "dimensions": [480, 270],
+    "displayWidth": 400,
+    "fps": 10,
+    "frames": 120,
+    "bytes": 680944,
+    "sha256": "3ca2d44b61ec3f80ef5241a8db5fcd9e8e9ddd2c4988fe6f05877200a8af61a8",
+    "derivedFromVerifiedMaster": true,
+    "seamlessLoopClaimed": false
+  },
+  "review": {
+    "scope": "Encoded 24-frame sequence, contact sheet, keyframes and largest-change wipe sample; not a real-time full-playback claim",
+    "browser": "Chromium 156.0.8078.4",
+    "previewWidths": [1440, 768, 390],
+    "checks": ["plate decoding", "same SVG state and PNG after out-of-order seek", "tracked annotation clearance", "keyboard scrubbing", "layer reveal control", "reduced-motion still", "no horizontal overflow", "three timeline tests"],
+    "notChecked": ["Safari/WebKit", "real phone", "hardware GPU encoding"]
+  },
+  "newImageGenerationCalls": 1,
+  "generatedVideoCalls": 0,
+  "socialPublication": false
+}

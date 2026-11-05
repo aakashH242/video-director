@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A little sunlight — AI scenery, editable SVG</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main>
+  <svg id="film" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-busy="true" aria-labelledby="title description" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <title id="title">A little sunlight, a little light</title>
+    <desc id="description">A painted hillside is an AI-generated still. Editable SVG solar equipment sits on its terrace: sunlight reaches a panel, an energy marker follows a cable and a lamp lights up. A final wipe reveals a drawing grid behind the SVG. Simplified energy illustration, not a wiring plan.</desc>
+    <defs>
+      <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0V32" stroke="#b5c7bf" stroke-opacity=".45" stroke-width="1"/></pattern>
+      <radialGradient id="title-wash" cx=".1" cy=".2" r=".85"><stop stop-color="#fff8e7" stop-opacity=".83"/><stop offset=".45" stop-color="#fff8e7" stop-opacity=".4"/><stop offset="1" stop-color="#fff8e7" stop-opacity="0"/></radialGradient>
+      <linearGradient id="metal" x2=".8" y2="1"><stop stop-color="#c5d5c4"/><stop offset="1" stop-color="#4b7169"/></linearGradient>
+      <linearGradient id="panel-glass" x2="1" y2="1"><stop stop-color="#1e555f"/><stop offset="1" stop-color="#102f3c"/></linearGradient>
+      <linearGradient id="shade" x2="1" y2=".3"><stop stop-color="#577f6e"/><stop offset="1" stop-color="#153d38"/></linearGradient>
+      <radialGradient id="glow"><stop stop-color="#ffcc68" stop-opacity=".75"/><stop offset="1" stop-color="#ffc568" stop-opacity="0"/></radialGradient>
+      <linearGradient id="cone" x2="0" y2="1"><stop stop-color="#ffda85" stop-opacity=".6"/><stop offset="1" stop-color="#ffdd88" stop-opacity="0"/></linearGradient>
+      <clipPath id="art-clip"><rect id="art-window" width="1280" height="720"/></clipPath>
+    </defs>
+    <g id="world">
+      <rect width="1280" height="720" fill="#f3f0df"/>
+      <rect width="1280" height="720" fill="url(#grid)"/>
+      <image id="plate" href="art/hillside.png" width="1280" height="720" preserveAspectRatio="xMidYMid slice" clip-path="url(#art-clip)"/>
+      <rect width="900" height="380" fill="url(#title-wash)"/>
+      <g id="sunlight">
+        <path id="beam" d="M360 275Q446 326 523 391" stroke="#fff0ac" stroke-width="4" stroke-dasharray="10 20"/>
+      </g>
+      <g id="panel-shadow"><ellipse cx="614" cy="588" rx="161" ry="20" transform="rotate(7 614 588)" fill="#334d3c" opacity=".2"/></g>
+      <g id="solar-panel">
+        <path d="M533 487L536 592M680 462L693 578M503 592L573 605M656 578L730 590" stroke="#385c51" stroke-width="12"/>
+        <path d="M536 582L674 506" stroke="#779180" stroke-width="7"/>
+        <path d="M413 402L642 355L738 492L509 539Z" fill="url(#metal)" stroke="#e3e1bf" stroke-width="3"/>
+        <path d="M422 407L639 363L728 487L511 531Z" fill="url(#panel-glass)"/>
+        <g id="cells"/>
+        <path d="M424 407L639 363L663 396L448 441Z" fill="#c6e3d8" opacity=".1"/>
+        <path d="M509 539L738 492V499L510 547Z" fill="#244b44"/>
+      </g>
+      <path id="wire" d="M700 558C752 567 768 615 829 613S923 592 967 591" stroke="#53604a" stroke-width="6"/>
+      <path id="power" d="M700 558C752 567 768 615 829 613S923 592 967 591" stroke="#f9ce75" stroke-width="3"/>
+      <g id="lamp-shadow"><ellipse cx="1030" cy="610" rx="111" ry="18" fill="#334d3c" opacity=".19"/></g>
+      <g id="lamp">
+        <g id="lamp-light" opacity="0">
+          <ellipse cx="990" cy="555" rx="151" ry="76" fill="url(#glow)"/>
+          <path d="M950 410L865 588Q995 626 1087 588L990 410Z" fill="url(#cone)"/>
+        </g>
+        <ellipse cx="994" cy="594" rx="61" ry="15" fill="#23483e"/>
+        <ellipse cx="994" cy="587" rx="61" ry="15" fill="url(#metal)" stroke="#dce0b9" stroke-width="2"/>
+        <path d="M994 582C994 499 970 491 967 414" stroke="#25483e" stroke-width="12"/>
+        <path d="M991 582C991 499 967 491 964 414" stroke="#73927b" stroke-width="4"/>
+        <path d="M918 412C918 341 1015 341 1015 412Z" fill="url(#shade)" stroke="#173c35" stroke-width="2"/>
+        <ellipse cx="966.5" cy="412" rx="48.5" ry="12" fill="#b8b991" stroke="#264d40" stroke-width="3"/>
+        <ellipse id="bulb" cx="967" cy="414" rx="12" ry="6" fill="#edc98b"/>
+      </g>
+      <g id="panel-callout" class="callout" opacity="0">
+        <path d="M523 368V318H432" stroke="#244d43" stroke-width="2"/>
+        <circle cx="523" cy="368" r="4" fill="#244d43"/>
+        <rect x="295" y="294" width="165" height="45" rx="9" fill="#fff9e9"/>
+        <text x="316" y="324">Solar panel</text>
+      </g>
+      <g id="energy" opacity="0">
+        <circle r="17" fill="#ffe8a0" opacity=".3"/>
+        <circle r="8" fill="#e78a37" stroke="#fff1b9" stroke-width="3"/>
+        <path id="energy-leader" stroke="#714b23" stroke-width="1.8"/>
+        <g id="energy-caption" class="callout">
+          <rect x="-79" y="-24" width="158" height="45" rx="9" fill="#fff9e9"/>
+          <text x="-59" y="5">Electricity</text>
+        </g>
+      </g>
+      <g id="layer-divider" opacity="0">
+        <path d="M780 0V720" stroke="#fff9e9" stroke-width="3"/>
+        <circle cx="780" cy="335" r="18" fill="#fff9e9"/>
+        <path d="M774 329L769 335L774 341M786 329L791 335L786 341" stroke="#365a4a" stroke-width="2"/>
+      </g>
+    </g>
+    <g id="intro-copy">
+      <text x="73" y="73" class="eyebrow">A LITTLE ENERGY STORY</text>
+      <text x="70" y="144" class="headline">A little sunlight.</text>
+      <text x="70" y="205" class="headline">A little light.</text>
+      <text x="73" y="251" class="subhead">Follow the energy.</text>
+    </g>
+    <g id="outro-copy" opacity="0">
+      <text x="73" y="73" class="eyebrow">THE SAME SCENE. TWO LAYERS.</text>
+      <text x="70" y="144" class="headline">One painted world.</text>
+      <text x="70" y="205" class="headline">Editable objects.</text>
+      <text x="73" y="251" class="subhead">Keep the art. Change the action.</text>
+    </g>
+    <g id="layer-tags" opacity="0">
+      <rect x="73" y="652" width="205" height="36" rx="18" fill="#fff9e9"/>
+      <text x="92" y="676" class="tag">AI BACKGROUND</text>
+      <rect x="905" y="652" width="302" height="36" rx="18" fill="#244b40"/>
+      <text x="925" y="676" class="tag light">SVG OBJECTS + LABELS</text>
+    </g>
+  </svg>
+  <div id="controls">
+    <button id="play" type="button" disabled>Play</button>
+    <label for="time">Time</label><input id="time" type="range" min="0" max="12" step=".01" value="0" disabled>
+    <output id="readout" for="time">0.0 s</output>
+    <button id="layers" type="button" disabled>Show layers</button>
+  </div>
+</main>
+<script type="module" src="scene.mjs"></script>
+</body>
+</html>
