@@ -15,6 +15,7 @@ Show the interesting result early. Write short specific sentences: “See which 
 
 Read only the relevant recipe:
 
+- First run or dependency setup: [first-video.md](references/first-video.md), a self-contained SVG example with a locked runtime and export commands.
 - Generated artwork + editable foreground: [hybrid-scenes.md](references/hybrid-scenes.md).
 - Actual product UI: [real-ui.md](references/real-ui.md).
 - Mechanisms and 3D: [3d-explainers.md](references/3d-explainers.md).
@@ -40,6 +41,8 @@ These adapt the explicit-time capture, safe local serving, clip assembly and enc
 
 | Helper | Purpose |
 | --- | --- |
+| `scripts/create-example.mjs` | Copy a self-contained first project into a new folder; never overwrite. |
+| `scripts/doctor.mjs` | Check dependencies and actually launch Chromium; no automatic installs. |
 | `scripts/capture.mjs` | Local page → exact-frame silent H.264; retries at the same time; source hashes/error receipt. |
 | `scripts/serve.mjs` | Loopback-only static server with ranges and path containment. |
 | `scripts/compare.mjs` | Labelled side-by-side; reject duration/fps mismatch. |
@@ -48,7 +51,7 @@ These adapt the explicit-time capture, safe local serving, clip assembly and enc
 | `scripts/self-test.mjs` | Regression tests for helpers and overwrite protection. |
 | `scripts/boundary-test.mjs` | Local browser-network and damaged-audio regressions. |
 
-Requires Node, FFmpeg/FFprobe and project-accessible Playwright/Chromium; Three.js only for 3D. Helpers do not install packages/models, call providers, read credentials or publish. The starter at `assets/comparison-study/` contains code and an asset manifest, **not** private screenshots, generated media, fonts or vendored Three.js.
+Requires Node, FFmpeg/FFprobe and project-accessible Playwright/Chromium; Three.js only for 3D. Helpers do not install packages/models, call providers, read credentials or publish. `assets/first-video/` is code-only and needs no external media. The comparison starter at `assets/comparison-study/` contains code and an asset manifest, **not** private screenshots, generated media, fonts or vendored Three.js.
 
 ## Delivery
 

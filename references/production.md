@@ -1,8 +1,12 @@
 # Runtime and capture
 
-Need Node 18+, FFmpeg/FFprobe (`libx264` or `libopenh264`) and Playwright >=1.48/Chromium (WebSocket blocking API). Reuse a project's runtime. If missing, install necessary dependencies into an isolated project with authorization; don't alter global Python, drivers or OS. Three.js is only needed for 3D.
+First run? Use the [self-contained eight-second example](first-video.md): its creator copies a complete project with locked dependencies and a setup checker.
+
+Use a current Node 22, 24 or 26, FFmpeg/FFprobe (`libx264` or `libopenh264`) and Playwright/Chromium. The example pins Playwright 1.64.1; older project runtimes need at least 1.48 for the WebSocket blocking API. Reuse a suitable project's runtime. If missing, install necessary dependencies into an isolated project with authorization; don't alter global Python, drivers or OS. Three.js is only needed for 3D. Check [tested setup and limits](../docs/tested-setup.md), not an assumed cross-platform guarantee.
 
 Helpers resolve Playwright from the current project's `package.json`. Alternatively set `VIDEO_DIRECTOR_RUNTIME=/absolute/path/to/existing/runtime/package.json`. `CHROME_PATH` selects a browser executable if necessary. No credentials are read.
+
+Run `node <skill>/scripts/doctor.mjs` from that project to check Node, FFmpeg/FFprobe, an available CPU H.264 encoder and an actual headless Chromium SVG screenshot. Missing dependencies return a nonzero exit and an actionable message; nothing is installed automatically. Doctor is a preflight, not a substitute for rendering the intended scene.
 
 Resolve `<skill>` from `SKILL.md`; run from your video project:
 

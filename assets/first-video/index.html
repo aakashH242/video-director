@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunlight to light — Video Director first example</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <svg id="film" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" role="img" aria-labelledby="film-title film-description" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <title id="film-title">Sunlight becomes electricity, which powers a lamp</title>
+      <desc id="film-description">An orange sun shines on a teal solar panel. A labelled orange dot follows a wire to a lamp, which lights up. A simplified diagram, not an electrical wiring plan.</desc>
+      <defs>
+        <radialGradient id="light"><stop stop-color="#ffb64c" stop-opacity=".5"/><stop offset="1" stop-color="#ffb64c" stop-opacity="0"/></radialGradient>
+      </defs>
+      <rect id="backdrop" width="1280" height="720" fill="#f4f0e7"/>
+      <text x="80" y="77" class="eyebrow">A LITTLE ENERGY STORY</text>
+      <text x="80" y="151" class="headline">Sunlight. Electricity. Light.</text>
+      <text id="caption" x="80" y="204" class="caption">Sunlight reaches the panel.</text>
+      <path d="M80 579H1200" stroke="#d8d7ca" stroke-width="2"/>
+      <g id="sun" transform="translate(223 367)">
+        <g id="rays" stroke="#d86b24" stroke-width="5">
+          <path d="M0-104V-87 M0 87V104 M-104 0H-87 M87 0H104 M-74-74L-62-62 M62 62L74 74 M-74 74L-62 62 M62-62L74-74"/>
+        </g>
+        <circle r="61" fill="#ed943c"/>
+      </g>
+      <path id="sunbeam" d="M322 407L453 456" stroke="#ed943c" stroke-width="3" stroke-dasharray="7 13"/>
+      <g id="panel">
+        <path d="M544 510L518 576M614 510L638 576M495 576H662" stroke="#254e50" stroke-width="10"/>
+        <rect x="449" y="327" width="262" height="183" rx="12" fill="#164e55" stroke="#254e50" stroke-width="5"/>
+        <g stroke="#7cb4ad" stroke-width="2"><path d="M514 337V500M580 337V500M646 337V500M459 388H701M459 449H701"/></g>
+        <rect id="panel-highlight" x="438" y="316" width="284" height="205" rx="20" stroke="#d86b24" stroke-width="3"/>
+      </g>
+      <path id="wire" d="M711 476H790Q820 476 820 506V522Q820 552 850 552H1016" stroke="#a6b6ad" stroke-width="5"/>
+      <g id="lamp" transform="translate(1016 431)">
+        <circle id="glow" cy="-33" r="139" fill="url(#light)"/>
+        <path d="M-32-8C-88-70-21-128 24-95C65-64 37-31 30-8L26 10H-26Z" fill="#e3ded0" stroke="#254e50" stroke-width="5"/>
+        <path id="filament" d="M-13-7L-22-40L0-28L22-40L13-7" stroke="#b2a78d" stroke-width="4"/>
+        <path d="M-25 12H25M-23 24H23M-17 36H17M0 37V121" stroke="#254e50" stroke-width="7"/>
+      </g>
+      <g id="energy">
+        <circle r="11" fill="#d86b24" stroke="#f4f0e7" stroke-width="4"/>
+        <path id="energy-leader" stroke="#94431c" stroke-width="2"/>
+        <g id="energy-caption">
+          <rect x="-78" y="-24" width="156" height="45" rx="8" fill="#fffdf8" stroke="#dbcebb"/>
+          <text x="-61" y="5" class="annotation">Electricity</text>
+        </g>
+      </g>
+      <text x="223" y="640" text-anchor="middle" class="part">Sun</text>
+      <text x="580" y="640" text-anchor="middle" class="part">Solar panel</text>
+      <text x="1016" y="640" text-anchor="middle" class="part">Lamp</text>
+    </svg>
+    <div id="controls">
+      <button id="play" type="button">Play</button>
+      <label for="time">Time</label>
+      <input id="time" type="range" min="0" max="8" step="0.01" value="0">
+      <output id="readout" for="time">0.0 s</output>
+    </div>
+  </main>
+  <script type="module" src="scene.mjs"></script>
+</body>
+</html>

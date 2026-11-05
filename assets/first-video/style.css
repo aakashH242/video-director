@@ -1,0 +1,16 @@
+:root { color-scheme: light; font-family: Arial, Helvetica, sans-serif; color: #254e50; background: #f4f0e7; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; display: grid; place-items: center; }
+main { width: 100%; }
+#film { display: block; width: 100%; height: auto; max-height: 100vh; }
+text { fill: #254e50; stroke: none; }
+.eyebrow { font-size: 16px; letter-spacing: 3px; font-weight: 700; }
+.headline { font-size: 52px; font-weight: 700; letter-spacing: -1.8px; }
+.caption { font-size: 27px; fill: #506c66; }
+.part { font-size: 24px; font-weight: 700; }
+.annotation { font-size: 22px; font-weight: 700; fill: #94431c; }
+#controls { display: flex; align-items: center; gap: 12px; padding: 12px 24px; }
+#time { flex: 1; accent-color: #254e50; }
+button { padding: 8px 16px; border: 1px solid #254e50; border-radius: 4px; background: #fffdf8; color: inherit; font: inherit; }
+output { min-width: 48px; }
+html.capture #controls { display: none; }

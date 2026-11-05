@@ -39,9 +39,7 @@ For **UI, diagrams, SVG graphics and procedural 3D**, Video Director gives you a
 - **Reuse your renders as stills.** Pull frames for diagrams, thumbnails or feature images from the same scene.
 - **Check a quick timing pass first.** Adjust the choreography before spending time on the final high-frame-rate render.
 
-That can mean **lower generation spend and faster iteration** for these kinds of scenes. This demo reused existing artwork and a real screenshot; its motion and annotation edits needed no new image or video generation.
-
-It isn't a universal replacement for image or video models. Use them for artwork or footage that needs them; use code for the parts you want precise control over. Total cost and speed still depend on agent usage, assets, scene complexity and your hardware.
+That can mean **lower generation spend and faster iteration** for these kinds of scenes. It isn't a universal replacement for image or video models but meant to complement them. Use them for artwork or footage that needs them; use code for the parts you want precise control over. Total cost and speed still depend on agent usage, assets, scene complexity and your hardware.
 
 ## What it helps you do
 
@@ -83,7 +81,25 @@ Or:
 
 > Use $video-director to explain this mechanism in 45 seconds. Show the whole thing, then close-ups. Highlight each part as the narration names it.
 
-Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/production.md) for setup and commands.
+### Render your first video
+
+Try the bundled eight-second SVG explainer. **No API key, paid generation or private assets.** Replace `/path/to/video-director` with your checkout:
+
+```bash
+node /path/to/video-director/scripts/create-example.mjs my-first-video
+cd my-first-video
+npm ci
+npm run browser:install
+npm run doctor
+npm run render
+npm run verify
+```
+
+Your MP4 is `my-first-video/output/first-video.mp4`: 720p, 60 fps, silent. The new folder must not already exist. You'll need Node and FFmpeg/FFprobe; the explicit install steps download project packages and Chromium, not OS dependencies.
+
+[First-video walkthrough and troubleshooting →](references/first-video.md)
+
+Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/production.md) for more capture options.
 
 ## What's in the box?
 
@@ -92,12 +108,13 @@ Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/pro
 | [Skill instructions](SKILL.md) | Shot planning, visual choices and the right recipe for the video. |
 | [Recipes](references/) | Hybrid artwork, real UI, 3D, audio, comparisons and production checks. |
 | [Working scripts](scripts/) | Frame-exact capture, local serving, audio pauses, side-by-side comparisons and export verification. |
+| [Runnable first video](assets/first-video/) | A complete, editable SVG explainer with locked dependencies, setup checks and export commands. |
 | [Editable starter](assets/comparison-study/) | The three-scene study, ready for your own approved art, screenshot and Three.js dependency. |
 | [Showcase](docs/showcase/) | The demo and small screenshots shown above. |
 
 ### Runtime
 
-Use **Node 18+**, **FFmpeg/FFprobe** with CPU H.264, and **Playwright ≥1.48 with Chromium**. The 3D starter uses **Three.js r169**. See the [setup and capture guide](references/production.md) for requirements, commands and compatibility.
+Use current **Node 22, 24 or 26**, **FFmpeg/FFprobe** with CPU H.264, and **Playwright with Chromium**. The runnable example pins Playwright **1.64.1**. The optional 3D starter uses **Three.js r169**. See the [tested setup and limits](docs/tested-setup.md) and [capture guide](references/production.md).
 
 <details>
 <summary><strong>Run the checks</strong></summary>
@@ -107,6 +124,9 @@ From your video project, set `VIDEO_DIRECTOR_RUNTIME` to an existing runtime's a
 ```bash
 node <skill>/scripts/self-test.mjs
 node <skill>/scripts/boundary-test.mjs
+node <skill>/scripts/setup-test.mjs
+node <skill>/scripts/hybrid-test.mjs
+node --test <skill>/assets/first-video/scene.test.mjs
 node --test <skill>/assets/comparison-study/mechanics.test.mjs
 ```
 

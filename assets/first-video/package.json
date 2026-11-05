@@ -1,0 +1,17 @@
+{
+  "name": "video-director-first-video",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": {"node": "^22.0.0 || ^24.0.0 || ^26.0.0"},
+  "scripts": {
+    "browser:install": "playwright install chromium",
+    "doctor": "node tools/doctor.mjs",
+    "test": "node --test scene.test.mjs",
+    "preview": "node tools/serve.mjs . --port 8097",
+    "timing": "node tools/capture.mjs --seconds 8 --fps 8 --width 1280 --height 720 --out output/timing.mp4",
+    "render": "node tools/capture.mjs --seconds 8 --fps 60 --width 1280 --height 720 --out output/first-video.mp4",
+    "verify": "node tools/verify.mjs output/first-video.mp4 --seconds 8 --fps 60 --width 1280 --height 720"
+  },
+  "devDependencies": {"playwright": "1.64.1"}
+}
