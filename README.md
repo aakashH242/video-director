@@ -8,7 +8,73 @@ Change the words, timing or camera move in code. Reuse the good assets. Render t
 
 An installable agent skill. No new video app to learn.
 
-[See the demo](#see-the-difference) · [Get started](#get-started) · [Explore the recipes](#pick-your-kind-of-video)
+[Get started](#get-started) · [See the demo](#see-the-difference) · [Explore the recipes](#pick-your-kind-of-video)
+
+## Get started
+
+### Install the skill
+
+With Node.js **22.20+** and npm, run:
+
+```bash
+npx skills add aakashH242/video-director --skill video-director --global
+```
+
+Choose your coding agent when prompted. `--global` makes the skill available across projects; leave it off to install in the current project. You don't need to publish or install a separate video app.
+
+<details>
+<summary><strong>Codex-only or manual installation</strong></summary>
+
+Install globally for Codex:
+
+```bash
+npx skills add aakashH242/video-director --skill video-director --global --agent codex
+```
+
+Or clone into a global skill location supported by your agent:
+
+```bash
+git clone https://github.com/aakashH242/video-director.git ~/.agents/skills/video-director
+```
+
+Already have a modified checkout? Preserve it and update deliberately—don't install or clone over your work. The [Skills CLI reference](https://github.com/vercel-labs/skills/blob/main/docs/commands.md) covers agents, installation scope and updates.
+
+</details>
+
+Then ask:
+
+> Use $video-director to make a 30-second product demo with readable real UI, smooth motion and clear annotations. Give me an MP4 to review.
+
+Or:
+
+> Use $video-director to explain this mechanism in 45 seconds. Show the whole thing, then close-ups. Highlight each part as the narration names it.
+
+### Render your first video
+
+Try the bundled eight-second SVG explainer. **No API key, paid generation or private assets.** Installing the skill supplies its instructions, examples and helpers; rendering also needs FFmpeg/FFprobe, project packages and Chromium.
+
+<details>
+<summary><strong>First-video setup and commands</strong></summary>
+
+Replace `/path/to/video-director` with your installed skill's location:
+
+```bash
+node /path/to/video-director/scripts/create-example.mjs my-first-video
+cd my-first-video
+npm ci
+npm run browser:install
+npm run doctor
+npm run render
+npm run verify
+```
+
+Your MP4 is `my-first-video/output/first-video.mp4`: 720p, 60 fps, silent. The new folder must not already exist. The explicit install steps download project packages and Chromium, not OS dependencies.
+
+</details>
+
+[First-video walkthrough and troubleshooting →](references/first-video.md)
+
+Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/production.md) for more capture options.
 
 ## See the difference
 
@@ -75,44 +141,6 @@ That can mean **lower generation spend and faster iteration** for these kinds of
 
 Mix these approaches when the story needs it. A product demo doesn't have to look like a mechanical explainer, and the next video doesn't have to reuse the last video's colours.
 
-## Get started
-
-Clone the repo into a global skill location supported by your agent:
-
-```bash
-git clone git@github.com:aakashH242/video-director.git ~/.agents/skills/video-director
-```
-
-Already installed? Update your existing checkout deliberately—don't overwrite it with another clone.
-
-Then ask:
-
-> Use $video-director to make a 30-second product demo with readable real UI, smooth motion and clear annotations. Give me an MP4 to review.
-
-Or:
-
-> Use $video-director to explain this mechanism in 45 seconds. Show the whole thing, then close-ups. Highlight each part as the narration names it.
-
-### Render your first video
-
-Try the bundled eight-second SVG explainer. **No API key, paid generation or private assets.** Replace `/path/to/video-director` with your checkout:
-
-```bash
-node /path/to/video-director/scripts/create-example.mjs my-first-video
-cd my-first-video
-npm ci
-npm run browser:install
-npm run doctor
-npm run render
-npm run verify
-```
-
-Your MP4 is `my-first-video/output/first-video.mp4`: 720p, 60 fps, silent. The new folder must not already exist. You'll need Node and FFmpeg/FFprobe; the explicit install steps download project packages and Chromium, not OS dependencies.
-
-[First-video walkthrough and troubleshooting →](references/first-video.md)
-
-Read [SKILL.md](SKILL.md) for the entry point and [production.md](references/production.md) for more capture options.
-
 ## What's in the box?
 
 | Included | What you get |
@@ -146,6 +174,10 @@ node --test <skill>/assets/comparison-study/mechanics.test.mjs
 The [production guide](references/production.md) covers capture and encoded-output verification. Technical checks support visual review; they don't replace watching the result or listening to the voice.
 
 </details>
+
+## License
+
+The original skill instructions, code and documentation are [MIT licensed](LICENSE). Existing third-party notices remain in place. Bundled artwork, screenshots and rendered media are not included in that code/documentation licence; see [licence scope and provenance](references/lineage.md#licence-scope).
 
 ---
 
